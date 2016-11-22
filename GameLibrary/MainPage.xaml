@@ -12,15 +12,15 @@
         <ViewModel:GameViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.498,0.503">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.498,0.503" Margin="0,0,-435,0">
         <ListView x:Name="listView" HorizontalAlignment="Left" Height="168" Margin="171,203,0,0" VerticalAlignment="Top" Width="298" ItemsSource="{Binding Gameliste}" SelectedItem="{Binding SelectedGame, Mode=TwoWay}"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="474,260,0,0" TextWrapping="Wrap" Text="{Binding SelectedGame.comment}" VerticalAlignment="Top" Height="56" Width="290" RenderTransformOrigin="0.5,0.5"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="474,204,0,0" TextWrapping="Wrap" Text="{Binding SelectedGame.dato}" VerticalAlignment="Top" Height="51" Width="180" RenderTransformOrigin="0.5,0.5"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="182,504,0,0" TextWrapping="Wrap" Text="{Binding NewGame.title, Mode=TwoWay}" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" PlaceholderText="Title"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="262,504,0,0" TextWrapping="Wrap" Text="{Binding NewGame.pris, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Pris"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewGame.dato, Mode=TwoWay}" VerticalAlignment="Top" Margin="348,504,0,0" PlaceholderText="MM/DD/YYYY"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="536,505,0,0" TextWrapping="Wrap" Text="{Binding NewGame.comment, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Comment" Height="69"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="276,583,0,0" VerticalAlignment="Top" Command="{Binding AddGameCommand}"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="320,505,0,0" TextWrapping="Wrap" Text="{Binding NewGame.pris, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Pris"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding NewGame.dato, Mode=TwoWay}" VerticalAlignment="Top" Margin="448,504,0,0" PlaceholderText="MM/DD/YYYY"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="641,505,0,0" TextWrapping="Wrap" Text="{Binding NewGame.comment, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Comment" Height="31"/>
+        <Button x:Name="Stuff" Content="Add" HorizontalAlignment="Left" Margin="228,551,0,0" VerticalAlignment="Top" Command="{Binding AddGameCommand}" Click="button1_Click" Width="112"/>
+        <Button x:Name="button" Content="remove" HorizontalAlignment="Left" Height="32" Margin="448,551,0,0" VerticalAlignment="Top" Width="110" Command="{Binding DeleteGameCommand}"/>
     </Grid>
 </Page>

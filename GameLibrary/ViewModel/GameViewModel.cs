@@ -34,7 +34,7 @@ namespace GameLibrary.ViewModel
         }
 
         public AddGameCommand AddGameCommand { get; set; }
-
+        public DeleteGameCommand DeleteGameCommand { get; set; }
 
         public Model.Game NewGame { get; set; }
 
@@ -44,6 +44,7 @@ namespace GameLibrary.ViewModel
             Gameliste = new Model.obsGamesList();
             AddGameCommand = new AddGameCommand(AddNewGame);
             NewGame = new Model.Game();
+            DeleteGameCommand = new DeleteGameCommand(DeleteGame);
             
             //AddGameCommand = new RelayCommand(AddNewGame,null);
         }
@@ -51,6 +52,11 @@ namespace GameLibrary.ViewModel
         public void AddNewGame()
         {
             Gameliste.Add(NewGame);
+        }
+
+        public void DeleteGame()
+        {
+            Gameliste.Remove(selectedGame);
         }
 
         //public RelayCommand AddGameCommand { get; set; }

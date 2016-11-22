@@ -10,7 +10,7 @@ namespace GameLibrary.Model
     {
         public string title { get; set; }
         public double pris { get; set; }
-        public DateTime dato { get; set; }
+        public string dato { get; set; }
         public string comment { get; set; }
 
         public override string ToString()
