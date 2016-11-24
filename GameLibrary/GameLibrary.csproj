@@ -105,6 +105,8 @@
     <Compile Include="ViewModel\AddGameCommand.cs" />
     <Compile Include="ViewModel\DeleteGameCommand.cs" />
     <Compile Include="ViewModel\GameViewModel.cs" />
+    <Compile Include="ViewModel\HentDataCommand.cs" />
+    <Compile Include="ViewModel\SaveGameCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

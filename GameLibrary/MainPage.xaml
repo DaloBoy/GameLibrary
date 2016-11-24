@@ -12,7 +12,7 @@
         <ViewModel:GameViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.498,0.503" Margin="0,0,-435,0">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.498,0.503" Margin="0,0,-515,0">
         <ListView x:Name="listView" HorizontalAlignment="Left" Height="168" Margin="171,203,0,0" VerticalAlignment="Top" Width="298" ItemsSource="{Binding Gameliste}" SelectedItem="{Binding SelectedGame, Mode=TwoWay}"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="474,260,0,0" TextWrapping="Wrap" Text="{Binding SelectedGame.comment}" VerticalAlignment="Top" Height="56" Width="290" RenderTransformOrigin="0.5,0.5"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="474,204,0,0" TextWrapping="Wrap" Text="{Binding SelectedGame.dato}" VerticalAlignment="Top" Height="51" Width="180" RenderTransformOrigin="0.5,0.5"/>
@@ -22,5 +22,7 @@
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="641,505,0,0" TextWrapping="Wrap" Text="{Binding NewGame.comment, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Comment" Height="31"/>
         <Button x:Name="Stuff" Content="Add" HorizontalAlignment="Left" Margin="228,551,0,0" VerticalAlignment="Top" Command="{Binding AddGameCommand}" Click="button1_Click" Width="112"/>
         <Button x:Name="button" Content="remove" HorizontalAlignment="Left" Height="32" Margin="448,551,0,0" VerticalAlignment="Top" Width="110" Command="{Binding DeleteGameCommand}"/>
+        <Button x:Name="button1" Content="Save" HorizontalAlignment="Left" Height="32" Margin="641,551,0,0" VerticalAlignment="Top" Width="85" Command="{Binding SaveGameCommand}"/>
+        <Button x:Name="button2" Content="Hent" HorizontalAlignment="Left" Height="32" Margin="764,551,0,0" VerticalAlignment="Top" Width="101" Command="{Binding HentDataCommand}"/>
     </Grid>
 </Page>
